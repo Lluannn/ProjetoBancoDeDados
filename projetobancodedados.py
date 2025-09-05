@@ -3,9 +3,7 @@ import sqlite3
 
 
 banco= sqlite3.connect('hospital.db')
-
 cursor= banco.cursor()
-
 
 cursor.execute("SELECT nome FROM pacientes WHERE cidade = 'São Paulo'")
 print(cursor.fetchall())
@@ -24,6 +22,7 @@ print(cursor.fetchall())
 
 cursor.execute("SELECT nome, medico_responsavel FROM pacientes WHERE medico_responsavel = 'Dr. João'")
 print(cursor.fetchall())
+
 
 
 
